@@ -1,1 +1,1 @@
-console.log('heyt')
+import './frameworks-drivers/web'
