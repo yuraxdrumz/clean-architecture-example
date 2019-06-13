@@ -1,10 +1,10 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 
-import CartRepositoryImpl from '../implementations/cartRepository'
-import WarehouseImpl from '../implementations/warehouse'
-import AddToCartWebImpl from '../implementations/addToCartWeb'
-import RemoveFromCartWebImpl from '../implementations/removeFileWeb'
+import CartRepositoryImpl from '../implementations/cartRepository/console'
+import WarehouseImpl from '../implementations/warehouse/console'
+import AddToCartWebImpl from '../implementations/addToCart/web'
+import RemoveFromCartWebImpl from '../implementations/removeFromCart/web'
 
 const app = express()
 const cartRepo = new CartRepositoryImpl()

@@ -1,6 +1,6 @@
-import ICartRepository from '../entities/interfaces/cartRepository'
-import Product from '../entities/types/Product'
-import AddedToCart from '../entities/types/AddedToCart'
+import ICartRepository from '../../entities/interfaces/cartRepository'
+import Product from '../../entities/types/Product'
+import AddedToCart from '../../entities/types/AddedToCart'
 
 class ConcreteCartRepository implements ICartRepository {
   async add(item: Product): Promise<AddedToCart> {
