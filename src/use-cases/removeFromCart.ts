@@ -15,14 +15,11 @@ abstract class RemoveFromCart implements IRemoveFromCart {
   }
 
   async remove(item: Product): Promise<RemovedFromCart> {
-    await this.cartRepository.remove(item)
     const isItemReturned = await this.warehouseService.returnItemToWarehouse(item)
-
-    if(isItemReturned){
-      await this.cartRepository.remove(item)
-      return true
-    }
-    return false
+    if(!isItemReturned) return false
+    const isItemDeleted = await this.cartRepository.remove(item)
+    if(!isItemDeleted) return false
+    return true
   }
 
 }

@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 app.post('/item', async (req,res,next)=>{
   try{
-    await addToCartInstance.receiveFileFromWeb(req, res)
+    await addToCartInstance.receiveProductFromWeb(req, res)
   }catch(e){
     next(e)
   }
@@ -24,7 +24,7 @@ app.post('/item', async (req,res,next)=>{
 
 app.delete('/item', async (req,res,next)=>{
   try{
-    await removeFromCartInstance.removeFileFromWeb(req, res)
+    await removeFromCartInstance.removeProductFromWeb(req, res)
   }catch(e){
     next(e)
   }

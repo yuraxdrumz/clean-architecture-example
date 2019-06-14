@@ -1,1 +1,1 @@
-import './frameworks-drivers/cli'
+import './frameworks-drivers/web'

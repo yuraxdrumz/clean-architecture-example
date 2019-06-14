@@ -1,7 +1,7 @@
 import RemoveFromCart from '../../use-cases/removeFromCart'
 
 class ConcreteRemoveFromCart extends RemoveFromCart {
-  async removeFileFromWeb(request, response){
+  async removeProductFromWeb(request, response){
     // some custom code specific to this implementation
     if(request && request.body && request.body["item"]){
       // a call to our use case

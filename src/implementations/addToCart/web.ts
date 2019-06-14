@@ -1,7 +1,7 @@
 import AddToCart from '../../use-cases/addToCart'
 
 class ConcreteAddToCart extends AddToCart {
-  async receiveFileFromWeb(request, response){
+  async receiveProductFromWeb(request, response){
     // some custom code specific to this implementation
     if(request && request.body && request.body["item"]){
       // a call to our use case
