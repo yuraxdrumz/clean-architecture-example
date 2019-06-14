@@ -15,11 +15,10 @@ abstract class AddToCart implements IAddToCart {
 
   async add(item: Product): Promise<AddedToCart> {
     const isItemInWarehouse = await this.warehouseService.checkItemInWarehouse(item)
-    if(isItemInWarehouse){
-      await this.cartRepository.add(item)
-      return true
-    }
-    return false
+    if(!isItemInWarehouse) return false
+    const isSaved = await this.cartRepository.add(item)
+    if(!isSaved) return false
+    return true
   }
 
 }
