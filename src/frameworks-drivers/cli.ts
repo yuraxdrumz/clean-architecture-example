@@ -26,9 +26,9 @@ program.parse(process.argv);
     throw new Error("-p is required")
   }
   if(program.add){
-    await addToCartInstance.receiveFileFromCli(program.product)
+    await addToCartInstance.receiveProductFromCli(program.product)
   } else if (program.remove){
-    await removeFromCartInstance.removeFileFromCli(program.product)
+    await removeFromCartInstance.removeProductFromCli(program.product)
   } else {
     throw new Error("-a or -r are required")
   }
