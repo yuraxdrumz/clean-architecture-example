@@ -1,6 +1,6 @@
 ## Node.js + Typescript + AVA + Clean Architecture starter kit
 This starter kit is build on top of Node.js + Typescript + AVA for testing + Clean Architecture.
-The idea behind Clean Architecture is to have several distinct layers, so that you and your team's development time stays clear, modular and linear, wether your code base is small or large. For a more detailed explanation about Clean Architecture see [here](https://yuriktech.com/2019/06/11/Implementing-Clean-Architecture/).
+The idea behind Clean Architecture is to have several distinct layers, so that you and your team's development time stays clean, modular and linear, wether your code base is small or large. For a more detailed explanation about Clean Architecture see [here](https://yuriktech.com/2019/06/11/Implementing-Clean-Architecture/).
 
 Clean Architecture divides your code to 4 main layers:
   - Entities - These are your contracts, types, abstract classses and interfaces
