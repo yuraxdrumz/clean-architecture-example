@@ -13,7 +13,7 @@ Note that each layer can only talk to the layer beneath it and only it! This way
 Adding a new use-case:
   1. Create appropriate entities
   2. Create your use-case with your application specific logic
-  3. Pass all dependencies of your use-case through the contructor only!
+  3. Pass all dependencies of your use-case through the constructor only!
   4. Create a new implementation which extends your use-case, like `HttpAddToCart` or `gRPCAddToCart` or whatever you like
   5. Create your frameworks-drivers `web.ts` or `gRPC.ts` if you dont have that already.
   6. Initiate all your implementations for that frameworks-drivers
